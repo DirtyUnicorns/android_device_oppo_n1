@@ -21,14 +21,14 @@
 TARGET_KERNEL_CONFIG := cyanogenmod_n1_defconfig
 
 # Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/n1/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_FIX_FACE_DETECTION_SCORE := true
-
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/oppo/n1/cmhw
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 10485760
@@ -40,3 +40,14 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 3221209088  # 3221209088 - 16384 for crypt
 
 # inherit from the proprietary version
 -include vendor/oppo/n1/BoardConfigVendor.mk
+
+# TWRP specific build flags
+DEVICE_RESOLUTION := 1080x1920
+#RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.590337/leds/lcd-backlight/brightness
+#TW_MAX_BRIGHTNESS := 255
+#TW_BOARD_CUSTOM_GRAPHICS := ../../../device/oppo/n1/recovery/graphics.c
+TW_NO_SCREEN_TIMEOUT := true
