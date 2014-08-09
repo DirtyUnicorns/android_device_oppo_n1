@@ -1,7 +1,7 @@
 #
 # system.prop for n1
 #
-ro.sf.lcd_density=480
+ro.sf.lcd_density=430
 ro.qualcomm.cabl=0
 debug.egl.recordable.rgba8888=1
 
