@@ -23,6 +23,8 @@
 # inherit from the proprietary version
 -include vendor/oppo/n1/BoardConfigVendor.mk
 
+BOARD_HARDWARE_CLASS := device/oppo/n1/cmhw
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
